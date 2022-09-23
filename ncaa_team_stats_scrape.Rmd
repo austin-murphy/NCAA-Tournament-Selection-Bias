@@ -1,0 +1,61 @@
+---
+title: "ncaa_team_stats_scrape"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(rvest)
+library(shiny)
+library(rsconnect)
+```
+
+
+```{r}
+schools <- read_csv("data/team_season_stats.csv")
+schools <- schools %>% filter(season < 2020)
+```
+
+
+```{r}
+scrapeTeamStatTables <- function(schools,season){
+  url <- paste0("https://www.sports-reference.com/cbb/schools/",schools,"/",season,".html")
+  print(url)
+  webpage <- read_html(url)
+  webpage %>% html_table(fill = TRUE) -> tables
+  return(tables)
+}
+```
+
+
+```{r}
+all_team_stats <- tibble()
+#all_team_totals <- tibble()
+
+for(i in 1:9441){
+    Sys.sleep(runif(1)*10)
+    teamTables <- scrapeTeamStatTables(schools[i,]$school,schools[i,]$season)
+    
+    team_stats <- teamTables[[2]]
+    team_stats$Team <- schools[i,]$school
+    team_stats$Season <- schools[i,]$season
+    rbind(all_team_stats, team_stats) -> all_team_stats
+    
+    
+    #team_totals <- teamTables[[4]]
+    #team_totals$Team <- schools[i,]$school
+    #team_totals$Season <- schools[i,]$season
+    #rbind(all_team_totals, team_totals) -> all_team_totals
+  }
+```
+
+
+```{r}
+all_team_stats %>% write_csv("data/all_team_stats.csv")
+```
+

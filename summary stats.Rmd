@@ -1,0 +1,158 @@
+---
+title: "summary stats"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(stargazer)
+library(vtable)
+library(gt)
+```
+
+#laod data
+```{r}
+rpi <- read_csv("data/rpi_selection_sunday.csv")
+opp_rpi <- read_csv("data/rpi_selection_sunday.csv")
+master_ids <- read_csv("data/master_id_2022.csv")
+schedule <- read_csv("data/team_schedules.csv")
+pg_stats <- read_csv("data/all_team_stats.csv")
+season_stats <- read_csv("data/team_season_stats.csv")
+data <- tibble()
+```
+
+#change opp_rpi column names, clean team names 
+```{r}
+opp_rpi <- opp_rpi %>% rename(opp_rank = Rank, opp_team = Team, opp_rpi = RPI, opp_season = Season)
+opp_rpi$opp_team <- gsub("[^a-zA-Z]", "", opp_rpi$opp_team)
+```
+
+#join opp_rpi table to schedule
+```{r}
+schedule <- schedule %>% filter(Type == "REG" | Type == "CTOURN")
+schedule$Opponent <- gsub("[^a-zA-Z]", "", schedule$Opponent)
+schedule <- schedule %>% left_join(master_ids, by = c('Opponent' = 'opponent_id'))
+schedule <- schedule %>% rename(opp_sr_id = sr_id, opp_rpi_id = rpi_id)
+schedule <- schedule %>% left_join(opp_rpi, by = c('opp_rpi_id' = 'opp_team', 'Season' = 'opp_season'))
+```
+
+#create columns for good wins, bad losses in schedule and add sums to master data
+```{r}
+#join opponent rpis to schedule table, add columns for opponent in RPI top 50, top 50 wins, then add sum of wins to master data table
+schedule <- schedule %>% mutate(opp_rpi_top_50 = ifelse(opp_rank <= 50, 1, 0))
+schedule$opp_rpi_top_50 <- replace_na(schedule$opp_rpi_top_50, 0)
+schedule <- schedule %>% mutate(Top_50_Win = ifelse(opp_rpi_top_50 == 1,ifelse(Tm > Opp,1,0),0))
+data <- schedule %>% group_by(Team, Season) %>% summarise(RPI_Top_50_Wins = sum(Top_50_Win))
+
+#Add columns for losses to teams below 200, and add sum of losses to master data table
+schedule <- schedule %>% mutate(opp_rpi_below_200 = ifelse(opp_rank >= 200, 1, 0))
+schedule$opp_rpi_below_200 <- replace_na(schedule$opp_rpi_below_200, 0)
+schedule <- schedule %>% mutate(Below_200_Loss = ifelse(opp_rpi_below_200 == 1,ifelse(Tm < Opp,1,0),0))
+bad_losses <- schedule %>% group_by(Team, Season) %>% summarise(RPI_Below_200_Losses = sum(Below_200_Loss))
+data <- data %>% left_join(bad_losses, by = c('Team' = 'Team', 'Season' = 'Season'))
+```
+
+#prep/clean stats tables and add to master data
+```{r}
+#clean pg_stats table and join to master data
+names(pg_stats)[1] <- "extra" 
+pg_stats <- pg_stats %>% filter(extra == "Team")
+pg_stats <- pg_stats %>% select(-c(1))
+data <- data %>% left_join(pg_stats, by = c('Team' = 'Team', 'Season' = 'Season'))
+
+#clean season stats, replace na's, add ranked dummy variable for if team was ranked at all during season, then add to master data
+season_stats <- season_stats %>% select(-c(1))
+season_stats$ap_highest <- replace_na(season_stats$ap_highest, 0)
+season_stats$seed <- replace_na(season_stats$seed, 0)
+season_stats <- season_stats %>% mutate(Ranked = ifelse(ap_highest > 0, 1, 0), Tournament = ifelse(seed > 0, 1, 0))
+data <- data %>% left_join(season_stats, by = c('Team' = 'school', 'Season' = 'season'))
+```
+
+#prep rpi table and add to master data
+```{r}
+#add opponent ids and rpi ids to master data
+data <- data %>% left_join(master_ids, by = c('Team' = 'sr_id'))
+
+#clean rpi table, add to master data
+rpi <- rpi %>% rename(rpi_rank = Rank, rpi_high = High)
+rpi$Team <- gsub("[^a-zA-Z]", "", rpi$Team)
+data <- data %>% left_join(rpi, by = c('rpi_id' = 'Team', 'Season' = 'Season'))
+```
+
+#filter master data to 2005-06 and after
+```{r}
+data <- data %>% filter(Season > 2005)
+```
+
+#calculate point differential/conf tourn results from schedule table and store in master data
+```{r}
+#filter schedule table and change scores to numeric
+schedule <- schedule %>% filter(Season > 2006)
+schedule$Tm <- as.numeric(schedule$Tm)
+schedule$Opp <- as.numeric(schedule$Opp)
+
+#calculate point differential, add to master data
+point_diff <- schedule %>% group_by(Team, Season) %>% summarise(point_diff = sum(Tm) - sum(Opp))
+data <- data %>% left_join(point_diff, by = c('Team' = 'Team', 'Season' = 'Season'))
+
+#filter schedule to conf tourn games, calculate conf tourn wins, add conference champion dummy, join with master data
+conf_tourns <- schedule %>% filter(Type == 'CTOURN') 
+conf_tourns <- conf_tourns %>% mutate(conf_tourn_win = ifelse(Tm > Opp, 1,0), conf_tourn_loss = ifelse(Tm < Opp,1,0))
+ctourn_results <- conf_tourns %>% group_by(Team, Season) %>% summarise(ctourn_wins = sum(conf_tourn_win), ctourn_losses = sum(conf_tourn_loss), ctourn_wpct = ctourn_wins / (ctourn_wins + ctourn_losses))
+#ctourn_results %>% filter(ctourn_wpct == 1) %>% group_by(Season) %>% summarise(n = n()) [test if ctourn_wpct accurately reflects conf champs, it does except for Ivy League from 2007-16]
+ctourn_results <- ctourn_results %>% mutate(conf_champ = ifelse(ctourn_wpct == 1,1,0))
+data <- data %>% left_join(ctourn_results, by = c('Team' = 'Team', 'Season' = 'Season'))
+
+#add ivy league auto bids for 2007-16
+data <- data %>% mutate(conf_champ = ifelse(Team == "pennsylvania",ifelse(Season == 2007,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "cornell",ifelse(Season == 2008,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "cornell",ifelse(Season == 2009,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "cornell",ifelse(Season == 2010,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "princeton",ifelse(Season == 2011,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "harvard",ifelse(Season == 2012,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "harvard",ifelse(Season == 2013,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "harvard",ifelse(Season == 2014,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "harvard",ifelse(Season == 2015,1,conf_champ),conf_champ))
+data <- data %>% mutate(conf_champ = ifelse(Team == "yale",ifelse(Season == 2016,1,conf_champ),conf_champ))
+
+#replace na's for ctourn_results columns (na's are teams with post season bans/transitioning to d1)
+data$ctourn_wins <- replace_na(data$ctourn_wins, 0)
+data$ctourn_losses <- replace_na(data$ctourn_losses, 0)
+data$ctourn_wpct <- replace_na(data$ctourn_wpct, 0)
+data$conf_champ <- replace_na(data$conf_champ, 0)
+
+#create auto-bid column for conf champs, Great West conf did not have auto-bid so must be set to 0
+data <- data %>% mutate(auto_bid = ifelse(conf == "GWC",0,conf_champ))
+```
+
+#create major conference dummy, write unfiltered master data csv
+```{r}
+data <- data %>% mutate(major_conf = ifelse(conf == 'ACC',1,ifelse(conf == 'Big 12',1,ifelse(conf == 'Big East',1,ifelse(conf == 'Big Ten',1,ifelse(conf == 'Pac-10',1,ifelse(conf == 'Pac-12',1,ifelse(conf == 'SEC',1,0))))))))
+
+data %>% write_csv("data/unfiltered_master.csv")
+```
+
+#filter data to bubble teams (20<rpi<80, non-auto bids), divide into summary stat and frequency tables
+```{r}
+data <- data %>% filter(rpi_rank <= 80, rpi_rank > 20, auto_bid == 0)
+
+summary_stats <- data %>% select(c(1:4,27,29,30,32,33,36,50,51,55,56))
+frequency_stats <- data %>% select(1,2,45,46,61)
+```
+
+#compute stats
+```{r}
+summary_stats %>% select(-Season) %>% sumtable()
+
+
+freq <- tibble('Stat' = c("Ranked", "Tournament", "major_conf"),
+                'Frequency' =  c(sum(frequency_stats$Ranked), sum(frequency_stats$Tournament), sum(frequency_stats$Tournament)))
+
+gt(freq)
+```
+
+

@@ -1,0 +1,101 @@
+---
+title: "initial visualizations"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(waffle)
+```
+
+```{r}
+data <- read_csv("data/unfiltered_master.csv")
+```
+
+#filter to correct rpi bounds, 1 seeds, combine in one table
+```{r}
+bubble <- data %>% filter(rpi_rank > 20, rpi_rank <= 80, auto_bid == 0)
+top_seed <- data %>% filter(seed == 1)
+
+contour <- bind_rows(bubble, top_seed)
+
+tournament <- bubble %>% filter(Tournament == 1)
+non_major_rate <- tournament %>% group_by(Season) %>% summarise(non_major = 1 -  (sum(major_conf)/n()))
+
+bubble %>% group_by(conf) %>% summarise(n = n()) %>% arrange(desc(n))
+```
+
+#plot sos vs wl%
+```{r}
+plot1 <- ggplot(bubble, aes(x = wpct, y = sos, color = as.factor(major_conf), shape = as.factor(Tournament))) +
+  geom_point() +
+  scale_color_manual(name = "Conference Type",
+                    values = c("#376cbf", "#BA182A"),
+                    labels = c("Non-Major", "Major")) +
+  scale_shape_manual(name = "Made Tournament",
+                    values = c(4,16), 
+                    labels = c("No", "Yes")) +
+  ggtitle("Win % vs Strength of Schedule") +
+  xlab("Win %") +
+  ylab("Strength of Schedule (SOS)") +
+  theme(plot.title = element_text(size = 13, face = "bold"),
+              legend.position = "right")
+```
+
+#yearly bar graph of number of bubble teams per conference type
+```{r}
+plot2 <- ggplot(bubble, aes(y = Season)) +
+  geom_bar(aes(fill = as.factor(major_conf))) +
+  ggtitle("Number of Bubble Teams by Season") +
+  xlab("Bubble Teams") +
+  scale_y_continuous(name = "Season", breaks = c(2007:2019), limits = c(2006,2020)) +
+  theme(plot.title = element_text(size = 13, face = "bold"),
+              legend.position = "right") +
+  scale_fill_manual(name = "Conference Type",
+                    values = c("#376cbf", "#BA182A"),
+                    labels = c("Non-Major", "Major"))
+```
+
+#yearly bar graph of number of bubble tournament berths per conference type
+```{r}
+plot3 <- ggplot(tournament, aes(y = Season)) +
+  geom_bar(aes(fill = as.factor(major_conf))) +
+  ggtitle("Bubble Team Tournamnet Bids by Season") +
+  xlab("Tournamnet Berths") +
+  scale_y_continuous(name = "Season", breaks = c(2007:2019), limits = c(2006,2020)) +
+  theme(plot.title = element_text(size = 13, face = "bold"),
+              legend.position = "right") +
+  scale_fill_manual(name = "Conference Type",
+                    values = c("#376cbf", "#BA182A"),
+                    labels = c("Non-Major", "Major"))
+```
+
+
+#waffle chart of bubble tournament teams by conference type
+```{r}
+tournament %>% summarise(n = sum(major_conf)/301)
+
+parts <- tibble(Conference = c("Major", "Non-Major"),
+                Percentage = c(78,22))
+
+plot4 <- ggplot(parts, aes(fill = Conference, values = Percentage)) + 
+  geom_waffle(n_rows = 10, size = 0.5, color = "white") +
+  scale_fill_manual(name = NULL,
+                    values = c("#BA182A", "#376cbf"),
+                    labels = c("Major", "Non-Major")) +
+  coord_equal() +
+  theme_void() +
+  ggtitle("Bubble Team Berths by Conference Type (2007-2019)") + 
+  theme(plot.title = element_text(size = 13, face = "bold"),
+              axis.text = element_blank(),
+              axis.title = element_blank(),
+              axis.ticks = element_blank(),
+              legend.title = element_blank(),
+              legend.position = "bottom")
+```
+

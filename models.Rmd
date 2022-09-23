@@ -1,0 +1,270 @@
+---
+title: "models"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(stargazer)
+library(vtable)
+library(gt)
+library(factoextra)
+library(stats)
+library(car)
+```
+
+```{r}
+data <- read_csv("data/unfiltered_master.csv")
+rpi_before <- read_csv("data/rpi_two_before.csv")
+
+#clean rpi_before
+rpi_before$Team <- gsub("[^a-zA-Z]", "", rpi_before$Team)
+
+names(rpi_before)[1] <- "prev_rpi_rank"
+```
+
+#add rpi two before to data, calculate rpi change from 2 weeks before and selection sunday
+```{r}
+data <- data %>% left_join(rpi_before, by = c("rpi_id" = "Team", "Season" = "Season"))
+
+#calculate difference in rpi ranking from 2 weeks before and selection sunday
+data <- data %>% mutate(rpi_rank_diff = prev_rpi_rank - rpi_rank)
+```
+
+#run k-clusters #1 for marquee status
+```{r}
+set.seed(1234)
+#filter cluster data to teams ranked higher than 80 in rpi
+data_filtered <- data %>% filter(rpi_rank <= 80) %>% dplyr::select(wpct, sos) %>% scale()
+#duplicate table above with team names
+data_team_included <- data %>% filter(rpi_rank <= 80)
+
+
+fviz_nbclust(data_filtered, kmeans, method = "silhouette")
+
+#run k means
+k_3 <- kmeans(data_filtered, centers = 3, nstart = 50)
+
+#cluster graph
+fviz_cluster(k_3, data = data_filtered)
+
+#add cluster number to data set
+data_team_included <- data_team_included %>% bind_cols(k_3$cluster)
+names(data_team_included)[64] <- "cluster1"
+
+#count number of at-large bids by cluster and conf type
+data_team_included %>% filter(auto_bid != 1, Tournament == 1) %>% group_by(cluster1, major_conf) %>% summarise(n = n(), med = median(seed))
+#6 teams from cluster 1 (all non-major), 457 from cluster 2 (371 major, 86 non-major) (no rpi filter)
+
+
+#34 at large 2007-10, 37 2011-13, 36 2014-19 (463 total)
+data_team_included %>% filter(cluster1 == 3, auto_bid != 1, Tournament == 1)
+```
+
+#run k-clusters #2 for marquee status
+```{r}
+data_cluster2 <- data_team_included %>% filter(cluster1 == 2)
+cluster2_filtered <- data_cluster2 %>% dplyr::select(wpct, sos) %>% scale()
+
+fviz_nbclust(cluster2_filtered, kmeans, method = "silhouette")
+
+k_3_2 <- kmeans(cluster2_filtered, centers = 6, nstart = 50)
+fviz_cluster(k_3_2, data = cluster2_filtered)
+
+data_cluster2 <- data_cluster2 %>% bind_cols(k_3_2$cluster)
+names(data_cluster2)[65] <- "cluster2"
+```
+
+#create table for marquee and rpi top 20 teams, join to master data
+```{r}
+#collect marquee teams from top cluster in cluster 2 (42 total)
+marquee <- data_cluster2 %>% filter(cluster2 == 3)
+marquee <- marquee %>% mutate(marquee = 1, season_after = Season + 1) %>% dplyr::select(Team, season_after, marquee)
+
+#join to master data
+data <- data %>% left_join(marquee, by = c("Team" = "Team", "Season" = "season_after"))
+data$marquee <- replace_na(data$marquee, 0)
+```
+
+#load betting data, calculate wins, wpct ats
+```{r}
+covers <- read_csv("data/betting_data.csv")
+#remove na's
+covers <- covers %>% filter(!is.na(spread))
+
+#filter out games post Selection Sunday
+#remove April games
+covers <- covers %>% filter(month != "Apr")
+#subset covers to march only
+covers_march <- covers %>% filter(month == "Mar")
+#separate by year
+march_2007 <- covers_march %>% filter(Season == "2006-2007")
+march_2008 <- covers_march %>% filter(Season == "2007-2008")
+march_2009 <- covers_march %>% filter(Season == "2008-2009")
+march_2010 <- covers_march %>% filter(Season == "2009-2010")
+march_2011 <- covers_march %>% filter(Season == "2010-2011")
+march_2012 <- covers_march %>% filter(Season == "2011-2012")
+march_2013 <- covers_march %>% filter(Season == "2012-2013")
+march_2014 <- covers_march %>% filter(Season == "2013-2014")
+march_2015 <- covers_march %>% filter(Season == "2014-2015")
+march_2016 <- covers_march %>% filter(Season == "2015-2016")
+march_2017 <- covers_march %>% filter(Season == "2016-2017")
+march_2018 <- covers_march %>% filter(Season == "2017-2018")
+march_2019 <- covers_march %>% filter(Season == "2018-2019")
+#filter on day within each year
+march_2007 <- march_2007 %>% filter(day <= 11)
+march_2008 <- march_2008 %>% filter(day <= 16)
+march_2009 <- march_2009 %>% filter(day <= 15)
+march_2010 <- march_2010 %>% filter(day <= 14)
+march_2011 <- march_2011 %>% filter(day <= 13)
+march_2012 <- march_2012 %>% filter(day <= 11)
+march_2013 <- march_2013 %>% filter(day <= 17)
+march_2014 <- march_2014 %>% filter(day <= 16)
+march_2015 <- march_2015 %>% filter(day <= 15)
+march_2016 <- march_2016 %>% filter(day <= 13)
+march_2017 <- march_2017 %>% filter(day <= 12)
+march_2018 <- march_2018 %>% filter(day <= 11)
+march_2019 <- march_2019 %>% filter(day <= 17)
+#remove March games (to be added back later)
+covers <- covers %>% filter(month != "Mar")
+#combine into 1 and merge back into covers
+march <- bind_rows(march_2007,march_2008,march_2009,march_2010,march_2011,march_2012,march_2013,march_2014,march_2015,march_2016,march_2017,march_2018,march_2019)
+
+covers <- covers %>% bind_rows(march)
+
+
+#calculate wins, losses, and pushes ats
+wins_ats <- covers %>% group_by(Team, Season) %>% filter(result_ats == "W") %>% summarise(wins_ats = n())
+
+losses_ats <- covers %>% group_by(Team, Season) %>% filter(result_ats == "L") %>% summarise(losses_ats = n())
+
+pushes_ats <- covers %>% group_by(Team, Season) %>% filter(result_ats == "P") %>% summarise(pushes_ats = n())
+
+#join wins, losses, and pushes into one table
+results_ats <- wins_ats %>% full_join(losses_ats, by = c("Team" = "Team", "Season" = "Season"))
+results_ats <- results_ats %>% full_join(pushes_ats, by = c("Team" = "Team", "Season" = "Season"))
+
+#replace na's
+results_ats$wins_ats <- replace_na(results_ats$wins_ats, 0)
+results_ats$losses_ats <- replace_na(results_ats$losses_ats, 0)
+results_ats$pushes_ats <- replace_na(results_ats$pushes_ats, 0)
+
+#separate season column into correct format for master data
+results_ats <- results_ats %>% separate(Season, into = c("x", "Season"), sep = "-")
+#edit new Season variable class
+class(results_ats$Season) <- "numeric"
+
+#select correct variables/order
+results_ats <- results_ats %>% dplyr::select(Team, Season, wins_ats, losses_ats, pushes_ats)
+
+#calculate wpct ats
+results_ats <- results_ats %>% mutate(wpct_ats = (wins_ats + (.5 * pushes_ats))/(wins_ats + losses_ats + pushes_ats))
+
+#join to master data
+data_complete <- data %>% left_join(results_ats, by = c("covers_id" = "Team", "Season" = "Season"))
+```
+
+#prep data for models
+```{r}
+#filter to bubble teams
+bubble_data <- data_complete %>% filter(rpi_rank > 20, rpi_rank <= 80, auto_bid != 1, Season >= 2007)
+
+#filter out 2013 UConn and 2015 Syracuse, both were ineligible for postseason
+bubble_no_ineligible <- bubble_data %>% filter(Team != "syracuse")
+bubble_no_ineligible <- bubble_no_ineligible %>% filter(Team != "connecticut")
+
+syracuse <- bubble_data %>% filter(Team == "syracuse") %>% filter(Season != 2015)
+connecticut <- bubble_data %>% filter(Team == "connecticut") %>% filter(Season != 2013)
+
+bubble_data <- bubble_no_ineligible %>% bind_rows(syracuse, connecticut)
+```
+
+#run model1
+```{r}
+#model1 - no biases or betting variables
+model1 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos, data = bubble_data, family = binomial(link = "logit"))
+summary(model1)
+```
+
+#run model2
+```{r}
+#model2 - no biases, substitute out wpct for wpct_ats
+model2 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct_ats + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos, data = bubble_data, family = binomial(link = "logit"))
+summary(model2)
+```
+
+#run model3
+```{r}
+#model3 - conf bias, no betting data
+model3 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + major_conf, data = bubble_data, family = binomial(link = "logit"))
+summary(model3)
+```
+
+#run model4
+```{r}
+#model4 - conf bias, substitute out wpct for wpct_ats
+model4 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct_ats + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + major_conf, data = bubble_data, family = binomial(link = "logit"))
+summary(model4)
+```
+
+#run model5
+```{r}
+#model5 - marquee bias, no betting data
+model5 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + marquee, data = bubble_data, family = binomial(link = "logit"))
+summary(model5)
+```
+
+#run model6
+```{r}
+#model6 - marquee bias, substitue out wpct for wpct_ats
+model6 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct_ats + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + marquee, data = bubble_data, family = binomial(link = "logit"))
+summary(model6)
+```
+
+#run model7
+```{r}
+#model7 - major conf and marquee bias, no betting data
+model7 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + major_conf + marquee, data = bubble_data, family = binomial(link = "logit"))
+summary(model7)
+```
+
+#run model8
+```{r}
+#model8 - major conf and marquee bias, substitute out wpct for wpct_ats
+model8 <- glm(Tournament ~ RPI_Top_50_Wins + RPI_Below_200_Losses + wpct_ats + conf_wpct + Ranked + RPI + rpi_rank_diff + point_diff + sos + major_conf + marquee, data = bubble_data, family = binomial(link = "logit"))
+summary(model8)
+```
+
+```{r}
+star <- stargazer(model1, model2, model7, model8, type = "html", column.labels = c("No Biases", "Both Biases"), dep.var.labels = "Made Tournament", covariate.labels = c("RPI Top 50 Wins", "RPI Below 200 Losses", "Win Pct", "Win Pct ATS", "Conference Win Pct", "Ranked", "RPI", "RPI Rank Difference", "Point Differential", "Strength of Schedule", "Major Conference", "Marquee"), omit.stat = c("all"), title = "Figure 1 - Logit Model Results", column.separate = c(2,2) + foo)
+```
+
+```{r}
+set_html_tbl_widths <- function(stargazer_html_obj, 
+                                width_left=150, 
+                                width_cols=rep(20, num_cols), 
+                                num_cols=3, filename=NULL) {
+  html_line <- c(paste0('<col width=',as.character(width_left),'>'))
+  num_cols <- length(width_cols)
+  for (col in 1:num_cols) {
+    html_line <- append(html_line,
+                        paste0('<col width=',as.character(width_cols[col]),'>'))
+  } 
+  new_html <- c(stargazer_html_obj[1:2], html_line, 
+                stargazer_html_obj[3:length(stargazer_html_obj)])
+
+  if (!is.null(filename)) {
+    write(new_html,    
+          file=filename)
+  }
+  return(new_html)
+}
+
+set_html_tbl_widths(star, 
+                    filename="select_regression_output.html")
+```
+

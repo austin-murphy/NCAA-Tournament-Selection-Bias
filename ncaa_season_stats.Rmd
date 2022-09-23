@@ -1,0 +1,71 @@
+---
+title: "ncaa_team_season_stats"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#load packages
+library(tidyverse)
+library(rvest)
+library(shiny)
+library(rsconnect)
+```
+
+```{r}
+#read csv to get school names
+schools <- read_csv("data/ncaa_all_teams.csv")
+
+
+#scrape function to collect data from college basketball reference, school is a variable to be used in for loop to automate pages scraped
+scrapeStatTables <- function(school){
+  url <- paste0("https://www.sports-reference.com/cbb/schools/",school,"/")
+  print(url)
+  webpage <- read_html(url)
+  webpage %>% html_table(fill = TRUE) -> tables
+  return(tables)
+}
+```
+
+
+```{r}
+#create tibble for all team stats
+all_school_stats <- tibble()
+
+#runs scrape in for loop, for each school name, scrape that school's season stats, fill tibble with tables, add school name
+for(i in 1:366){
+    Sys.sleep(runif(1)*7)
+    teamTables <- scrapeStatTables(schools[i,]$School)
+    
+    school_stats <- teamTables[[1]]
+    school_stats$School <- schools[i,]$School
+    all_school_stats %>% bind_rows(school_stats) -> all_school_stats
+  }
+```
+
+
+```{r}
+#all_school_stats %>% write_csv("data/all_season_stats.csv")
+```
+
+
+```{r}
+#team stats from file manipulated in excel (renamed columns)
+team_stats <- read_csv("data/team_stats.csv")
+team_stats <- team_stats %>% filter(filter != "nm", season_number != "Rk")
+class(team_stats$season) = "numeric"
+team_stats <- team_stats %>% mutate(season = season + 1)
+team_stats <- team_stats %>% filter(season > 1990)
+team_stats <- team_stats %>% select(-c(3))
+team_stats %>% write_csv("data/team_season_stats.csv")
+```
+
+
+```{r}
+team_season_stats <- read_csv("data/team_season_stats.csv")
+team_season_stats %>% group_by(school) %>% count(school) %>% filter(n < 32)
+```
+

@@ -1,0 +1,60 @@
+---
+title: "ncaa_scrape"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(rvest)
+library(shiny)
+library(rsconnect)
+```
+
+
+```{r}
+schools <- read_csv("data/team_season_stats.csv")
+schools <- schools %>% filter(season < 2020)
+```
+
+
+```{r}
+scrapeStatTables <- function(schools,season){
+  url <- paste0("https://www.sports-reference.com/cbb/schools/",schools,"/",season,"-schedule.html")
+  print(url)
+  webpage <- read_html(url)
+  webpage %>% html_table(fill = TRUE) -> tables
+  return(tables)
+}
+
+```
+
+
+```{r}
+all_schedule <- tibble()
+#season_schools <- schools %>% filter(Start <= 1992) %>% arrange(desc(School))
+
+for(i in 1:10508){
+    Sys.sleep(runif(1)*10)
+    #season_schools <- schools %>% filter(Start <= season)
+    teamTables <- scrapeStatTables(schools[i,]$school,schools[i,]$season)
+    
+    season_schedule <- teamTables[[2]]
+    season_schedule$Team <- schools[i,]$school
+    season_schedule$Season <- schools[i,]$season
+    if (schools[i,]$season > 2014) {
+      season_schedule <- subset(season_schedule,select = -c(Time))
+    }
+    rbind(all_schedule, season_schedule) -> all_schedule
+  }
+```
+
+
+```{r}
+#all_schedule %>% write_csv("data/team_schedules_91_19.csv")
+```
+
+

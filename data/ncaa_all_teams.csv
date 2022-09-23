@@ -1,0 +1,367 @@
+﻿Rk,School,City State,Start,End,Yrs,G,W,L,W-L%,SRS,SOS,AP,CREG,CTRN,NCAA,FF,NC
+1,abilene-christian,Abilene Texas,2014,2022,12,359,197,162,0.549,-8.45,-6.48,0,0,2,2,0,0
+2,air-force,USAF Academy Colorado,1958,2022,65,1780,771,1009,0.433,-2.84,1.32,0,1,0,4,0,0
+3,akron,Akron Ohio,1902,2022,71,1650,981,669,0.595,-0.16,-1.54,0,9,5,5,0,0
+4,alabama-am,Normal Alabama,2000,2022,23,655,250,405,0.382,-16.96,-11.37,0,1,1,1,0,0
+5,alabama,Tuscaloosa Alabama,1913,2022,109,2822,1738,1083,0.616,7.56,4.77,16,11,8,23,0,0
+6,alabama-state,Montgomery Alabama,1983,2022,40,1177,553,624,0.47,-13.22,-10.08,0,4,4,4,0,0
+7,albany-ny,Albany New York,2000,2022,23,705,346,359,0.491,-6.78,-6.02,0,2,5,5,0,0
+8,alcorn-state,Alcorn State Mississippi,1978,2022,45,1328,575,753,0.433,-13.59,-8.8,0,11,6,6,0,0
+9,american,Washington D.C.,1967,2022,56,1575,769,806,0.488,-5.73,-3.83,0,7,3,3,0,0
+10,appalachian-state,Boone North Carolina,1974,2022,49,1448,711,737,0.491,-5.81,-3.31,0,10,3,3,0,0
+11,arizona-state,Tempe Arizona,1912,2022,107,2632,1394,1238,0.53,5.02,4.08,7,8,0,16,0,0
+12,arizona,Tucson Arizona,1905,2022,115,2817,1858,958,0.66,9.19,5.1,28,25,8,36,4,1
+13,arkansas,Fayetteville Arkansas,1924,2022,99,2744,1761,983,0.642,7.81,3.24,18,26,7,34,6,1
+14,arkansas-state,State University Arkansas,1971,2022,52,1505,772,733,0.513,-3.66,-3.01,0,7,1,1,0,0
+15,arkansas-pine-bluff,Pine Bluff Arkansas,1999,2022,24,723,210,513,0.29,-19.66,-8.34,0,0,1,1,0,0
+16,army,West Point New York,1903,2022,120,2569,1277,1292,0.497,-9.12,-4.64,0,0,0,0,0,0
+17,auburn,Auburn Alabama,1906,2022,116,2660,1430,1229,0.538,5.81,4.31,9,5,2,11,1,0
+18,austin-peay,Clarksville Tennessee,1964,2022,59,1696,850,846,0.501,-5.55,-3.47,1,8,5,7,0,0
+19,ball-state,Muncie Indiana,1972,2022,51,1497,792,705,0.529,-1,-0.77,1,10,7,7,0,0
+20,baylor,Waco Texas,1907,2022,116,2818,1432,1386,0.508,2.23,2.74,9,7,0,14,3,1
+21,bellarmine,Louisville Kentucky,2021,2022,2,55,34,21,0.618,-2.76,-3.42,0,0,1,0,0,0
+22,belmont,Nashville Tennessee,2000,2022,23,731,492,239,0.673,1.54,-3.65,0,13,8,8,0,0
+23,bethune-cookman,Daytona Beach Florida,1981,2022,41,1215,442,773,0.364,-16.6,-9.88,0,2,0,0,0,0
+24,binghamton,Binghamton New York,2002,2022,21,621,221,400,0.356,-11.22,-5.53,0,1,1,1,0,0
+25,boise-state,Boise Idaho,1972,2022,51,1508,849,659,0.563,0.67,-0.43,1,7,6,8,0,0
+26,boston-college,Chestnut Hill Massachusetts,1946,2022,77,2167,1173,994,0.541,3.13,3.28,8,6,2,18,0,0
+27,boston-university,Boston Massachusetts,1916,2022,96,2218,1142,1076,0.515,-6.68,-5.4,0,8,7,7,0,0
+28,bowling-green-state,Bowling Green Ohio,1916,2022,107,2660,1435,1225,0.539,-0.54,0,2,9,0,4,0,0
+29,bradley,Peoria Illinois,1903,2022,118,2964,1721,1243,0.581,4.67,2.93,12,7,4,9,2,0
+30,brigham-young,Provo Utah,1903,2022,120,3018,1897,1121,0.629,7.84,3.67,12,25,3,30,0,0
+31,brown,Providence Rhode Island,1901,2022,116,2630,1073,1557,0.408,-10.74,-4.52,0,1,0,2,0,0
+32,bryant,Smithfield Rhode Island,2011,2022,12,364,149,215,0.409,-9.88,-5.71,0,1,1,1,0,0
+33,bucknell,Lewisburg Pennsylvania,1896,2022,127,2756,1477,1279,0.536,-8.31,-6.81,0,18,8,8,0,0
+34,buffalo,Buffalo New York,1992,2022,53,1292,668,624,0.517,-4.42,-2.33,1,5,4,4,0,0
+35,butler,Indianapolis Indiana,1897,2022,124,2831,1643,1188,0.58,1.95,3.32,8,13,7,16,2,0
+36,cal-poly,San Luis Obispo California,1995,2022,28,817,314,503,0.384,-7.17,-1.82,0,1,1,1,0,0
+37,cal-state-bakersfield,Bakersfield California,2011,2022,12,371,181,190,0.488,-4.75,-3.02,0,1,1,1,0,0
+38,cal-state-fullerton,Fullerton California,1975,2022,48,1392,662,730,0.476,-1.99,-0.4,0,2,4,4,0,0
+39,cal-state-northridge,Northridge California,1991,2022,32,949,400,549,0.421,-5.69,-1.85,0,3,2,2,0,0
+40,california-baptist,Riverside California,2019,2022,4,119,68,51,0.571,-3.67,-4.79,0,0,0,0,0,0
+41,california,Berkeley California,1908,2022,113,2896,1656,1240,0.572,7.02,6.13,5,14,0,19,3,1
+42,campbell,Buies Creek North Carolina,1978,2022,45,1300,551,749,0.424,-12.29,-7.1,0,2,1,1,0,0
+43,canisius,Buffalo New York,1904,2022,118,2651,1337,1314,0.504,-3.82,-1.79,1,8,1,4,0,0
+44,central-arkansas,Conway Arkansas,2011,2022,12,360,109,251,0.303,-14.31,-4.63,0,0,0,0,0,0
+45,central-connecticut-state,New Britain Connecticut,1987,2022,36,1045,408,637,0.39,-12.93,-7.59,0,3,3,3,0,0
+46,central-florida,Orlando Florida,1985,2022,38,1132,572,560,0.505,-3.48,-2.13,0,1,4,5,0,0
+47,central-michigan,Mount Pleasant Michigan,1974,2022,49,1410,616,794,0.437,-4.18,-0.49,0,8,2,4,0,0
+48,charleston-southern,Charleston South Carolina,1975,2022,48,1375,559,816,0.407,-13.37,-7.12,0,4,4,1,0,0
+49,charlotte,Charlotte North Carolina,1973,2022,50,1484,809,675,0.545,3.14,1.92,2,6,5,11,1,0
+50,chattanooga,Chattanooga Tennessee,1978,2022,45,1386,840,546,0.606,-2.27,-3.54,1,20,12,12,0,0
+51,chicago-state,Chicago Illinois,1985,2022,38,1093,280,813,0.256,-15.82,-2.14,0,0,1,0,0,0
+52,cincinnati,Cincinnati Ohio,1902,2022,121,2917,1865,1052,0.639,11.53,5.06,25,25,12,33,6,2
+53,clemson,Clemson South Carolina,1912,2022,111,2724,1380,1342,0.507,5.57,4.33,6,1,1,13,0,0
+54,cleveland-state,Cleveland Ohio,1973,2022,50,1469,732,737,0.498,-3.47,-1.73,0,6,3,3,0,0
+55,coastal-carolina,Conway South Carolina,1987,2022,36,1083,557,526,0.514,-7.74,-6.17,0,7,5,4,0,0
+56,colgate,Hamilton New York,1901,2022,122,2768,1343,1425,0.485,-10.46,-5.66,0,6,5,5,0,0
+57,college-of-charleston,Charleston South Carolina,1992,2022,31,959,652,307,0.68,0.89,-4.03,2,13,4,5,0,0
+58,colorado,Boulder Colorado,1902,2022,119,2626,1383,1243,0.527,5.35,5.99,6,19,1,15,2,0
+59,colorado-state,Fort Collins Colorado,1902,2022,118,2629,1331,1298,0.506,2.92,2.4,1,6,1,11,0,0
+60,columbia,New York New York,1901,2022,122,2674,1312,1362,0.491,-7.81,-5.15,2,13,0,3,0,0
+61,connecticut,Storrs Connecticut,1901,2022,116,2700,1713,987,0.634,6.68,1.17,17,27,8,34,5,4
+62,coppin-state,Baltimore Maryland,1986,2022,37,1117,506,611,0.453,-10.93,-8.07,0,11,4,4,0,0
+63,cornell,Ithaca New York,1899,2022,124,2756,1284,1472,0.466,-7.73,-4.48,0,8,0,5,0,0
+64,creighton,Omaha Nebraska,1912,2022,102,2679,1631,1048,0.609,4.04,3.51,6,16,12,23,0,0
+65,dartmouth,Hanover New Hampshire,1900,2022,122,2886,1328,1556,0.46,-10.73,-5.09,0,12,0,7,2,0
+66,davidson,Davidson North Carolina,1909,2022,113,2765,1517,1248,0.549,-2.61,-2.8,6,25,13,15,0,0
+67,dayton,Dayton Ohio,1904,2022,117,2853,1712,1141,0.6,7.02,3.2,8,6,2,18,1,0
+68,delaware,Newark Delaware,1906,2022,81,1972,982,989,0.498,-8.33,-5.89,0,4,6,6,0,0
+69,delaware-state,Dover Delaware,1974,2022,49,1407,541,866,0.385,-16.91,-10.12,0,3,1,1,0,0
+70,denver,Denver Colorado,1999,2022,99,2158,961,1197,0.445,-4.13,-0.79,0,4,0,0,0,0
+71,depaul,Chicago Illinois,1924,2022,99,2573,1503,1070,0.584,6.14,5.95,12,2,0,22,2,0
+72,detroit-mercy,Detroit Michigan,1910,2022,113,2732,1450,1282,0.531,-0.04,0.91,2,2,3,6,0,0
+73,dixie-state,St. George Utah,2021,2022,2,52,21,31,0.404,-11.27,-1.98,0,0,0,0,0,0
+74,drake,Des Moines Iowa,1907,2022,116,2824,1314,1510,0.465,1.18,2.9,5,9,1,5,1,0
+75,drexel,Philadelphia Pennsylvania,1895,2022,52,1436,785,651,0.547,-3.43,-4.42,0,7,5,5,0,0
+76,duke,Durham North Carolina,1906,2022,117,3156,2246,910,0.712,16.26,6.71,50,23,26,44,17,5
+77,duquesne,Pittsburgh Pennsylvania,1914,2022,106,2604,1438,1166,0.552,1.96,2.01,7,2,1,5,1,0
+78,east-carolina,Greenville North Carolina,1967,2022,56,1593,698,895,0.438,-4.58,-1.01,0,0,2,2,0,0
+79,east-tennessee-state,Johnson City Tennessee,1959,2022,64,1833,1005,828,0.548,-3.96,-3.37,1,11,10,10,0,0
+80,eastern-illinois,Charleston Illinois,1982,2022,41,1205,543,662,0.451,-7.81,-4.39,0,0,3,2,0,0
+81,eastern-kentucky,Richmond Kentucky,1948,2022,72,1946,957,989,0.492,-4.73,-2.77,0,7,5,8,0,0
+82,eastern-michigan,Ypsilanti Michigan,1933,2022,50,1469,691,778,0.47,-3.38,-0.33,0,5,4,4,0,0
+83,eastern-washington,Cheney Washington,1984,2022,39,1141,506,635,0.443,-5.89,-2.32,0,4,3,3,0,0
+84,elon,Elon North Carolina,2000,2022,23,702,298,404,0.425,-8.2,-3.5,0,2,0,0,0,0
+85,evansville,Evansville Indiana,1925,2022,49,1392,731,661,0.525,0.85,1,0,6,4,5,0,0
+86,fairfield,Fairfield Connecticut,1965,2022,58,1665,804,861,0.483,-4.52,-3.03,0,3,3,3,0,0
+87,fairleigh-dickinson,Teaneck New Jersey,1968,2022,55,1544,730,814,0.473,-10.13,-6.93,0,6,6,6,0,0
+88,florida-am,Tallahassee Florida,1980,2022,43,1262,487,775,0.386,-15.64,-8.98,0,0,4,3,0,0
+89,florida-atlantic,Boca Raton Florida,1994,2022,29,861,329,532,0.382,-8.45,-3.34,0,1,1,1,0,0
+90,florida,Gainesville Florida,1921,2022,101,2638,1486,1151,0.564,8.05,5.06,15,9,4,23,5,2
+91,florida-gulf-coast,Fort Myers Florida,2011,2022,12,387,221,166,0.571,-3.18,-4.01,0,3,3,3,0,0
+92,florida-international,Miami Florida,1988,2022,35,1042,422,620,0.405,-8.08,-3.28,0,1,1,1,0,0
+93,florida-state,Tallahassee Florida,1957,2022,66,1948,1163,785,0.597,7.68,5.04,12,3,2,18,1,0
+94,fordham,Bronx New York,1903,2022,118,2981,1545,1436,0.518,-2.83,-0.21,1,4,3,4,0,0
+95,fresno-state,Fresno California,1956,2022,55,1659,932,727,0.562,2.52,1.71,1,6,5,6,0,0
+96,furman,Greenville South Carolina,1920,2022,101,2581,1305,1276,0.506,-5.82,-4.08,0,6,6,6,0,0
+97,gardner-webb,Boiling Springs North Carolina,2003,2022,20,626,295,331,0.471,-7.58,-4.76,0,1,1,1,0,0
+98,george-mason,Fairfax Virginia,1979,2022,44,1321,708,613,0.536,-1.12,-1.43,0,4,4,6,1,0
+99,george-washington,Washington D.C.,1913,2022,105,2579,1378,1201,0.534,0.12,-0.1,3,7,5,11,0,0
+100,georgetown,Washington D.C.,1907,2022,114,2814,1706,1108,0.606,6.77,4.03,20,11,8,31,5,1
+101,georgia,Athens Georgia,1906,2022,117,2826,1459,1367,0.516,3.9,4.98,5,3,3,12,1,0
+102,georgia-southern,Statesboro Georgia,1972,2022,51,1487,760,727,0.511,-6.68,-4.95,0,7,3,3,0,0
+103,georgia-state,Atlanta Georgia,1974,2022,49,1430,646,784,0.452,-6.95,-3.78,0,8,6,6,0,0
+104,georgia-tech,Atlanta Georgia,1920,2022,103,2684,1412,1272,0.526,5.64,5.21,8,3,5,17,2,0
+105,gonzaga,Spokane Washington,1944,2022,71,2102,1395,707,0.664,3.93,-0.11,15,27,20,24,2,0
+106,grambling,Grambling Louisiana,1978,2022,45,1284,485,799,0.378,-17.23,-9.35,0,3,0,0,0,0
+107,grand-canyon,Phoenix Arizona,2014,2022,9,280,176,104,0.629,0.05,-3.9,0,1,1,1,0,0
+108,green-bay,Green Bay Wisconsin,1982,2022,41,1247,669,578,0.536,-1.06,-1.35,0,4,4,5,0,0
+109,hampton,Hampton Virginia,1996,2022,27,829,426,403,0.514,-9.28,-8.73,0,4,6,6,0,0
+110,hartford,West Hartford Connecticut,1985,2022,38,1127,481,646,0.427,-8.88,-5.45,0,0,1,1,0,0
+111,harvard,Boston Massachusetts,1901,2022,111,2538,1187,1351,0.468,-8.11,-4.88,0,7,0,5,0,0
+112,hawaii,Honolulu Hawaii,1971,2022,52,1518,803,715,0.529,1.85,1.67,1,3,4,5,0,0
+113,high-point,High Point North Carolina,2000,2022,23,695,327,368,0.471,-9.22,-6.16,0,4,0,0,0,0
+114,hofstra,Hempstead New York,1943,2022,57,1652,861,791,0.521,-5.73,-4.33,0,9,6,4,0,0
+115,holy-cross,Worcester Massachusetts,1901,2022,102,2485,1429,1056,0.575,-2.3,-3.85,6,6,7,13,2,1
+116,houston-baptist,Houston Texas,2011,2022,28,803,324,479,0.403,-11.84,-5.95,0,2,1,1,0,0
+117,houston,Houston Texas,1951,2022,72,2140,1307,833,0.611,6.17,2.85,12,7,8,23,6,0
+118,howard,Washington D.C.,1974,2022,49,1389,540,849,0.389,-15,-9.66,0,4,3,2,0,0
+119,idaho-state,Pocatello Idaho,1959,2022,64,1771,773,998,0.436,-6.6,-2.72,0,4,2,5,0,0
+120,idaho,Moscow Idaho,1906,2022,117,2932,1362,1568,0.465,-4.43,-1.18,1,7,4,4,0,0
+121,illinois,Champaign Illinois,1906,2022,117,2897,1856,1041,0.641,13.01,7.77,29,18,3,32,5,0
+122,illinois-state,Normal Illinois,1899,2022,63,1631,959,672,0.588,3.37,1.72,0,6,4,6,0,0
+123,illinois-chicago,Chicago Illinois,1982,2022,41,1242,595,647,0.479,-3.2,-1.43,0,2,2,3,0,0
+124,incarnate-word,San Antonio Texas,2014,2022,9,258,105,153,0.407,-13.79,-6.52,0,0,0,0,0,0
+125,indiana,Bloomington Indiana,1901,2022,122,2980,1886,1094,0.633,13.88,8.16,28,22,0,40,8,5
+126,indiana-state,Terre Haute Indiana,1900,2022,100,2255,1160,1095,0.514,-0.24,1.87,1,2,3,4,1,0
+127,iona,New Rochelle New York,1954,2022,69,1900,1072,828,0.564,-3.96,-3.57,1,12,13,15,0,0
+128,iowa,Iowa City Iowa,1893,2022,125,2925,1721,1203,0.589,11.45,7.42,21,8,3,28,3,0
+129,iowa-state,Ames Iowa,1908,2022,115,2788,1410,1378,0.506,6.79,6.46,10,6,6,21,1,0
+130,iupui,Indianapolis Indiana,1999,2022,24,733,329,404,0.449,-6.09,-2.89,0,1,1,1,0,0
+131,jackson-state,Jackson Mississippi,1978,2022,45,1344,632,712,0.47,-11.12,-8.75,0,7,4,3,0,0
+132,jacksonville,Jacksonville Florida,1967,2022,56,1617,796,821,0.492,-3.75,-2.22,2,2,2,5,1,0
+133,jacksonville-state,Jacksonville Alabama,1996,2022,27,803,360,443,0.448,-8.79,-6.28,0,1,1,2,0,0
+134,james-madison,Harrisonburg Virginia,1977,2022,46,1366,693,673,0.507,-2.44,-2.26,0,8,3,5,0,0
+135,missouri-kansas-city,Kansas City Missouri,1990,2022,33,976,421,555,0.431,-6.8,-3.28,0,0,0,0,0,0
+136,kansas,Lawrence Kansas,1899,2022,124,3232,2355,877,0.729,15.83,7.25,47,63,16,50,16,3
+137,kansas-state,Manhattan Kansas,1906,2022,117,2903,1691,1212,0.583,10.23,6.36,16,19,2,31,4,0
+138,kennesaw-state,Kennesaw Georgia,2010,2022,13,397,103,294,0.259,-13.34,-3.3,0,0,0,0,0,0
+139,kent-state,Kent Ohio,1914,2022,103,2492,1242,1250,0.498,-1.98,-0.38,0,9,6,6,0,0
+140,kentucky,Lexington Kentucky,1903,2022,119,3093,2355,737,0.762,17.65,6.81,54,56,33,60,17,8
+141,la-salle,Philadelphia Pennsylvania,1932,2022,91,2450,1408,1042,0.575,2.6,0.67,6,9,8,12,2,1
+142,lafayette,Easton Pennsylvania,1901,2022,112,2679,1371,1308,0.512,-8.14,-6.89,0,17,3,4,0,0
+143,lamar,Beaumont Texas,1970,2022,53,1543,774,769,0.502,-5.13,-4.03,0,9,4,6,0,0
+144,lehigh,Bethlehem Pennsylvania,1902,2022,121,2600,1135,1465,0.437,-12.96,-7.44,0,4,5,5,0,0
+145,liberty,Lynchburg Virginia,1989,2022,34,1051,528,523,0.502,-8.99,-6.84,0,5,6,5,0,0
+146,lipscomb,Nashville Tennessee,2004,2022,19,591,311,280,0.526,-5.59,-4.41,0,3,1,1,0,0
+147,arkansas-little-rock,Little Rock Arkansas,1979,2022,44,1315,717,598,0.545,-3.47,-3.5,0,13,5,5,0,0
+148,long-beach-state,Long Beach California,1970,2022,53,1578,852,726,0.54,0.8,1.13,5,15,5,9,0,0
+149,long-island-university,Brooklyn New York,1929,2022,77,2068,1152,914,0.558,-9.22,-6.48,1,9,6,7,0,0
+150,longwood,Farmville Virginia,2008,2022,15,478,178,300,0.372,-14.33,-5.66,0,1,1,1,0,0
+151,louisiana-lafayette,Lafayette Louisiana,1972,2022,51,1481,858,623,0.579,0.45,-1.25,2,10,7,10,0,0
+152,louisiana-state,Baton Rouge Louisiana,1909,2022,114,2842,1624,1218,0.571,5.93,4.56,13,12,1,24,4,0
+153,louisiana-tech,Ruston Louisiana,1974,2022,49,1476,865,611,0.586,0.12,-1.55,1,11,6,5,0,0
+154,louisiana-monroe,Monroe Louisiana,1974,2022,49,1443,742,701,0.514,-4.84,-4.29,0,10,8,7,0,0
+155,louisville,Louisville Kentucky,1912,2022,108,2857,1895,962,0.663,13.36,6.55,35,23,17,43,10,3
+156,loyola-il,Chicago Illinois,1921,2022,101,2582,1395,1187,0.54,0.31,1.52,6,7,4,8,2,1
+157,loyola-md,Baltimore Maryland,1908,2022,78,1816,828,988,0.456,-8.89,-4.81,0,0,2,2,0,0
+158,loyola-marymount,Los Angeles California,1943,2022,75,2071,902,1169,0.436,-4.02,0.46,2,3,2,5,0,0
+159,maine,Orono Maine,1904,2022,78,1869,816,1053,0.437,-12.34,-7.22,0,0,0,0,0,0
+160,manhattan,Riverdale New York,1905,2022,116,2705,1409,1296,0.521,-3.59,-2.52,0,13,5,8,0,0
+161,marist,Poughkeepsie New York,1982,2022,41,1206,528,678,0.438,-7.42,-5.64,0,5,2,2,0,0
+162,marquette,Milwaukee Wisconsin,1917,2022,105,2729,1683,1046,0.617,9.05,4.82,22,3,1,34,3,1
+163,marshall,Huntington West Virginia,1919,2022,98,2548,1451,1095,0.57,-0.95,-1.23,1,6,4,6,0,0
+164,maryland,College Park Maryland,1924,2022,99,2692,1619,1073,0.601,10.1,5.45,24,7,4,29,2,1
+165,maryland-baltimore-county,Baltimore Maryland,1987,2022,36,1060,436,624,0.411,-10.89,-6.56,0,3,2,2,0,0
+166,maryland-eastern-shore,Princess Anne Maryland,1974,2022,43,1215,350,865,0.288,-19.85,-9.43,0,1,1,0,0,0
+167,massachusetts,Amherst Massachusetts,1926,2022,63,1810,982,828,0.543,0.74,-0.19,5,15,5,9,1,0
+168,massachusetts-lowell,Lowell Massachusetts,2014,2022,10,282,126,156,0.447,-9.75,-5.52,0,0,0,0,0,0
+169,mcneese-state,Lake Charles Louisiana,1974,2022,49,1415,668,747,0.472,-7.53,-4.9,0,6,2,2,0,0
+170,memphis,Memphis Tennessee,1956,2022,67,2037,1361,676,0.668,8.84,3.72,16,18,11,26,3,0
+171,mercer,Macon Georgia,1974,2022,49,1448,697,751,0.481,-7.56,-5.18,0,3,3,3,0,0
+172,merrimack,North Andover Massachusetts,2020,2022,3,79,43,36,0.544,-8.94,-7.33,0,1,0,0,0,0
+173,miami-fl,Coral Gables Florida,1949,2022,59,1707,975,732,0.571,3.35,3.56,7,2,1,11,0,0
+174,miami-oh,Oxford Ohio,1906,2022,117,2671,1427,1244,0.534,1.97,0.83,1,18,4,17,0,0
+175,michigan-state,East Lansing Michigan,1899,2022,123,2904,1777,1127,0.612,11.71,7.79,25,16,6,35,10,2
+176,michigan,Ann Arbor Michigan,1918,2022,105,2748,1676,1072,0.61,11.02,7.84,23,15,3,31,8,1
+177,middle-tennessee,Murfreesboro Tennessee,1959,2022,64,1829,1007,822,0.551,-3.92,-2.76,0,12,7,9,0,0
+178,milwaukee,Milwaukee Wisconsin,1974,2022,39,1149,554,595,0.482,-4.22,-1.67,0,4,4,4,0,0
+179,minnesota,Minneapolis Minnesota,1896,2022,127,2956,1690,1264,0.572,9.75,7.68,10,9,0,14,1,0
+180,mississippi,University Mississippi,1909,2022,112,2722,1357,1363,0.499,2.7,4.45,2,3,2,9,0,0
+181,mississippi-state,Mississippi State Mississippi,1909,2022,110,2721,1481,1240,0.544,4.38,4.43,11,12,5,11,1,0
+182,mississippi-valley-state,Itta Bena Mississippi,1980,2022,43,1261,482,779,0.382,-14.99,-8.89,0,7,5,5,0,0
+183,missouri-state,Springfield Missouri,1983,2022,40,1255,744,511,0.593,4.37,1.19,0,5,3,6,0,0
+184,missouri,Columbia Missouri,1907,2022,116,2896,1683,1213,0.581,8.73,6.19,14,15,8,28,0,0
+185,monmouth,West Long Branch New Jersey,1984,2022,39,1164,563,601,0.484,-7.59,-6.09,0,5,4,4,0,0
+186,montana,Missoula Montana,1912,2022,107,2727,1488,1239,0.546,-2.45,-2.66,0,13,11,12,0,0
+187,montana-state,Bozeman Montana,1902,2022,111,2707,1483,1224,0.548,-5.18,-2.74,0,11,3,3,0,0
+188,morehead-state,Morehead Kentucky,1956,2022,67,1869,942,927,0.504,-5.69,-3.52,0,9,5,8,0,0
+189,morgan-state,Baltimore Maryland,1985,2022,38,1115,419,696,0.376,-15.24,-9.07,0,3,2,2,0,0
+190,mount-st-marys,Emmitsburg Maryland,1989,2022,34,1009,440,569,0.436,-9.12,-6.45,0,2,6,6,0,0
+191,murray-state,Murray Kentucky,1954,2022,69,1979,1264,715,0.639,-0.41,-3.28,3,29,17,18,0,0
+192,navy,Annapolis Maryland,1908,2022,115,2540,1445,1095,0.569,-4.84,-4.04,1,8,6,11,0,0
+193,north-carolina-state,Raleigh North Carolina,1913,2022,110,2896,1782,1114,0.615,10.88,5.92,17,13,17,27,3,2
+194,nebraska,Lincoln Nebraska,1897,2022,126,2971,1539,1432,0.518,5.66,6.27,2,7,1,7,0,0
+195,nevada,Reno Nevada,1913,2022,67,1784,1002,782,0.562,0.56,1.31,4,12,5,9,0,0
+196,nevada-las-vegas,Las Vegas Nevada,1970,2022,53,1668,1147,521,0.688,9.16,3.22,16,13,11,20,4,1
+197,new-hampshire,Durham New Hampshire,1927,2022,70,1797,629,1168,0.35,-14.45,-7.04,0,1,0,0,0,0
+198,new-mexico,Albuquerque New Mexico,1900,2022,116,2671,1535,1136,0.575,3.74,2.2,11,12,6,15,0,0
+199,new-mexico-state,Las Cruces New Mexico,1905,2022,112,2699,1603,1094,0.594,1.34,-0.35,5,21,13,26,1,0
+200,new-orleans,New Orleans Louisiana,1976,2022,45,1322,715,607,0.541,-2.56,-2.51,2,8,4,5,0,0
+201,niagara,Niagara University New York,1906,2022,116,2798,1506,1291,0.538,-3.05,-1.9,2,10,2,3,0,0
+202,nicholls-state,Thibodaux Louisiana,1981,2022,42,1196,507,689,0.424,-11.64,-6.02,0,5,2,2,0,0
+203,njit,Newark New Jersey,2010,2022,13,393,184,209,0.468,-9.89,-6.34,0,1,0,0,0,0
+204,norfolk-state,Norfolk Virginia,1998,2022,25,771,383,388,0.497,-10.81,-8.73,0,4,3,3,0,0
+205,north-alabama,Florence Alabama,2019,2022,4,116,45,71,0.388,-10.34,-4.25,0,0,0,0,0,0
+206,north-carolina-at,Greensboro North Carolina,1974,2022,49,1438,696,742,0.484,-12.65,-9.64,0,12,14,10,0,0
+207,north-carolina-central,Durham North Carolina,2011,2022,12,371,221,150,0.596,-7.92,-9.13,0,4,4,4,0,0
+208,north-carolina,Chapel Hill North Carolina,1911,2022,112,3159,2321,838,0.735,15.73,6.98,51,39,26,52,21,6
+209,north-dakota,Grand Forks North Dakota,2011,2022,29,574,320,254,0.557,-8.61,-4.34,0,1,3,1,0,0
+210,north-dakota-state,Fargo North Dakota,2009,2022,43,830,572,258,0.689,-0.16,-3.05,0,4,5,4,0,0
+211,north-florida,Jacksonville Florida,2010,2022,13,417,203,214,0.487,-6.08,-2.3,0,3,1,1,0,0
+212,north-texas,Denton Texas,1922,2022,67,1853,844,1009,0.455,-4.47,-0.33,0,5,4,4,0,0
+213,northeastern,Boston Massachusetts,1938,2022,59,1621,843,778,0.52,-4.46,-4.11,0,14,9,9,0,0
+214,northern-arizona,Flagstaff Arizona,1919,2022,83,1990,894,1096,0.449,-8.17,-3.02,0,6,2,2,0,0
+215,northern-colorado,Greeley Colorado,1911,2022,43,825,446,379,0.541,-4.04,-4.17,0,3,1,1,0,0
+216,northern-illinois,De Kalb Illinois,1927,2022,56,1566,699,867,0.446,-4.18,-1.19,0,3,2,3,0,0
+217,northern-iowa,Cedar Falls Iowa,1981,2022,42,1272,676,596,0.531,1.22,1.63,1,4,6,8,0,0
+218,northern-kentucky,Highland Heights Kentucky,2013,2022,10,308,171,137,0.555,-3.21,-4.23,0,2,3,2,0,0
+219,northwestern-state,Natchitoches Louisiana,1977,2022,46,1334,584,750,0.438,-10.06,-5.58,0,3,3,3,0,0
+220,northwestern,Evanston Illinois,1905,2022,117,2694,1120,1573,0.416,3.54,7.47,0,2,0,1,0,0
+221,notre-dame,Notre Dame Indiana,1897,2022,118,3005,1937,1067,0.645,10.07,5.8,25,1,1,37,1,0
+222,oakland,Rochester Michigan,2000,2022,23,742,400,342,0.539,-1.48,-1.51,0,4,3,3,0,0
+223,ohio,Athens Ohio,1908,2022,115,2777,1589,1188,0.572,0.56,-0.22,0,10,7,14,0,0
+224,ohio-state,Columbus Ohio,1899,2022,123,2980,1830,1150,0.614,11.9,7.5,24,22,5,35,11,1
+225,oklahoma,Norman Oklahoma,1908,2022,115,2861,1739,1122,0.608,9.72,6.55,19,14,7,33,5,0
+226,oklahoma-state,Stillwater Oklahoma,1908,2022,113,2929,1714,1215,0.585,8.84,5.91,19,19,4,29,6,2
+227,old-dominion,Norfolk Virginia,1977,2022,46,1436,869,567,0.605,3.08,-0.09,0,9,7,12,0,0
+228,nebraska-omaha,Omaha Nebraska,2013,2022,10,306,132,174,0.431,-7.3,-2.33,0,0,0,0,0,0
+229,oral-roberts,Tulsa Oklahoma,1972,2022,47,1405,790,615,0.562,0.44,-1.1,2,7,6,6,0,0
+230,oregon,Eugene Oregon,1903,2022,117,3126,1732,1393,0.554,6.27,5.89,6,8,5,17,2,1
+231,oregon-state,Corvallis Oregon,1902,2022,121,3195,1801,1394,0.564,6.11,5.65,8,12,1,18,2,0
+232,pacific,Stockton California,1938,2022,72,2030,1024,1006,0.504,-1.2,-0.05,1,10,5,9,0,0
+233,penn-state,University Park Pennsylvania,1897,2022,126,2751,1522,1228,0.553,2.69,2.35,2,1,1,9,1,0
+234,pennsylvania,Philadelphia Pennsylvania,1897,2022,121,2950,1813,1136,0.615,0.12,-2.96,6,38,1,24,1,0
+235,pepperdine,Malibu California,1944,2022,68,1957,966,991,0.494,-2.25,0.22,1,12,3,13,0,0
+236,pittsburgh,Pittsburgh Pennsylvania,1906,2022,115,2873,1652,1221,0.575,5.18,4.23,13,11,4,26,1,0
+237,portland,Portland Oregon,1954,2022,69,1952,820,1132,0.42,-5.33,0.71,0,0,1,2,0,0
+238,portland-state,Portland Oregon,1999,2022,33,953,465,488,0.488,-5.94,-3.06,0,2,2,2,0,0
+239,prairie-view,Prairie View Texas,1981,2022,42,1214,372,842,0.306,-20.17,-8.24,0,4,2,2,0,0
+240,presbyterian,Clinton South Carolina,2011,2022,12,371,127,244,0.342,-13.44,-5.46,0,0,0,0,0,0
+241,princeton,Princeton New Jersey,1901,2022,122,2895,1784,1110,0.616,1.39,-3.59,4,31,1,25,1,0
+242,providence,Providence Rhode Island,1929,2022,73,2111,1294,817,0.613,7.64,4.48,7,1,2,21,2,0
+243,purdue,West Lafayette Indiana,1897,2022,124,2937,1884,1053,0.641,11.99,7.71,24,24,1,33,2,0
+244,ipfw,Fort Wayne Indiana,2003,2022,20,618,292,326,0.472,-6.33,-2.91,0,2,0,0,0,0
+245,quinnipiac,Hamden Connecticut,1999,2022,24,713,337,376,0.473,-8.18,-6.67,0,1,0,0,0,0
+246,radford,Radford Virginia,1985,2022,38,1139,592,547,0.52,-8.89,-6.96,0,6,3,3,0,0
+247,rhode-island,Kingston Rhode Island,1904,2022,116,2736,1560,1176,0.57,-0.95,-0.54,0,15,2,10,0,0
+248,rice,Houston Texas,1915,2022,108,2647,1159,1488,0.438,-3.25,0.73,0,10,0,4,0,0
+249,richmond,Richmond Virginia,1913,2022,110,2675,1435,1240,0.536,-1.88,-1.31,1,6,7,10,0,0
+250,rider,Lawrenceville New Jersey,1929,2022,59,1675,875,800,0.522,-7.43,-6.01,0,12,3,3,0,0
+251,robert-morris,Moon Township Pennsylvania,1977,2022,46,1369,661,708,0.483,-8.91,-6.73,0,11,9,8,0,0
+252,rutgers,New Brunswick New Jersey,1914,2022,108,2543,1294,1249,0.509,-0.57,0.88,2,9,2,8,1,0
+253,sacramento-state,Sacramento California,1992,2022,31,879,278,601,0.316,-12.13,-3.17,0,0,0,0,0,0
+254,sacred-heart,Fairfield Connecticut,2000,2022,23,678,263,415,0.388,-11.1,-7.1,0,0,0,0,0,0
+255,saint-francis-pa,Loretto Pennsylvania,1956,2022,67,1827,815,1012,0.446,-9.23,-4.54,0,2,1,1,0,0
+256,saint-josephs,Philadelphia Pennsylvania,1910,2022,113,2856,1668,1188,0.584,3.72,1.92,6,20,6,21,1,0
+257,saint-louis,St. Louis Missouri,1916,2022,106,2741,1491,1250,0.544,5.18,3.95,10,7,3,10,0,0
+258,saint-marys-ca,Moraga California,1910,2022,113,2672,1407,1265,0.527,-0.66,0.47,5,7,4,11,0,0
+259,saint-peters,Jersey City New Jersey,1966,2022,57,1634,816,818,0.499,-4.95,-4.01,0,6,4,4,0,0
+260,sam-houston-state,Huntsville Texas,1987,2022,36,1075,569,506,0.529,-6.72,-5.26,0,6,2,2,0,0
+261,samford,Birmingham Alabama,1973,2022,50,1443,630,813,0.437,-8.96,-5.15,0,3,2,2,0,0
+262,san-diego-state,San Diego California,1971,2022,52,1569,873,696,0.556,3.99,3.37,5,10,8,14,0,0
+263,san-diego,San Diego California,1980,2022,43,1258,618,640,0.491,-0.48,0.7,0,2,2,4,0,0
+264,san-francisco,San Francisco California,1924,2022,95,2490,1443,1047,0.58,2.59,0.75,9,15,1,17,3,2
+265,san-jose-state,San Jose California,1938,2022,72,1972,774,1198,0.392,-4.41,0.87,0,1,2,2,0,0
+266,santa-clara,Santa Clara California,1909,2022,113,2687,1542,1145,0.574,1.42,0.63,2,11,2,11,1,0
+267,seattle,Seattle Washington,2011,2022,40,1120,661,459,0.59,0.94,-1.35,5,1,0,11,1,0
+268,seton-hall,South Orange New Jersey,1909,2022,109,2688,1570,1117,0.584,3.88,3.75,8,4,3,14,1,0
+269,siena,Loudonville New York,1939,2022,64,1758,965,793,0.549,-4.13,-3.55,1,11,6,6,0,0
+270,south-alabama,Mobile Alabama,1972,2022,51,1498,845,653,0.564,-0.95,-1.75,0,12,5,8,0,0
+271,south-carolina,Columbia South Carolina,1909,2022,114,2765,1468,1296,0.531,4.25,3.61,8,7,2,9,1,0
+272,south-carolina-state,Orangeburg South Carolina,1972,2022,51,1497,714,783,0.477,-13.47,-10.41,0,8,5,5,0,0
+273,south-carolina-upstate,Spartanburg South Carolina,2011,2022,12,384,158,226,0.411,-9.22,-4.4,0,0,0,0,0,0
+274,south-dakota,Vermillion South Dakota,2011,2022,12,373,195,178,0.523,-4.29,-3.51,0,1,0,0,0,0
+275,south-dakota-state,Brookings South Dakota,2009,2022,14,458,305,153,0.666,2.3,-2.71,0,8,6,6,0,0
+276,south-florida,Tampa Florida,1974,2022,49,1447,654,793,0.452,1.16,3.15,0,1,1,3,0,0
+277,southeast-missouri-state,Cape Girardeau Missouri,1992,2022,31,918,379,539,0.413,-8.84,-4.84,0,1,1,1,0,0
+278,southeastern-louisiana,Hammond Louisiana,1981,2022,41,1190,517,673,0.434,-11.04,-6.36,0,5,1,1,0,0
+279,southern-california,Los Angeles California,1907,2022,116,2930,1692,1238,0.577,8.14,6.27,11,7,1,20,2,0
+280,southern-illinois,Carbondale Illinois,1968,2022,55,1638,906,732,0.553,2.61,2.05,1,9,5,10,0,0
+281,southern-illinois-edwardsville,Edwardsville Illinois,2011,2022,12,350,109,241,0.311,-12.84,-4.54,0,0,0,0,0,0
+282,southern,Baton Rouge Louisiana,1978,2022,45,1329,691,638,0.52,-10.16,-10.01,0,8,9,9,0,0
+283,southern-methodist,Dallas Texas,1917,2022,106,2651,1400,1251,0.528,2.76,1.91,5,15,3,12,1,0
+284,southern-mississippi,Hattiesburg Mississippi,1973,2022,50,1476,748,728,0.507,0.23,1.7,1,2,0,3,0,0
+285,southern-utah,Cedar City Utah,1989,2022,34,996,441,555,0.443,-7.05,-3.76,0,3,3,1,0,0
+286,st-bonaventure,St. Bonaventure New York,1920,2022,102,2485,1420,1065,0.571,2.28,1.61,6,8,2,8,1,0
+287,st-francis-ny,Brooklyn Heights New York,1902,2022,103,2589,1259,1330,0.486,-11.62,-5.7,0,6,0,0,0,0
+288,st-johns-ny,Queens New York,1908,2022,115,3021,1950,1071,0.645,8.5,5.09,15,14,3,30,2,0
+289,st-thomas-mn,St. Paul Minnesota,2022,2022,1,30,10,20,0.333,-11.14,-5.58,0,0,0,0,0,0
+290,stanford,Stanford California,1914,2022,107,2783,1579,1204,0.567,7.9,6.18,10,11,1,17,2,1
+291,stephen-f-austin,Nacogdoches Texas,1987,2022,36,1056,615,441,0.582,-5.35,-6.57,0,10,5,5,0,0
+292,stetson,DeLand Florida,1972,2022,51,1463,660,803,0.451,-8.29,-4.5,0,0,0,0,0,0
+293,stony-brook,Stony Brook New York,2000,2022,23,704,358,346,0.509,-6.33,-5.4,0,4,1,1,0,0
+294,syracuse,Syracuse New York,1901,2022,121,3006,2057,949,0.684,9.73,4.04,30,10,5,41,6,1
+295,tarleton-state,Stephenville Texas,2021,2022,2,51,24,27,0.471,-5.23,-1.76,0,0,0,0,0,0
+296,texas-christian,Fort Worth Texas,1914,2022,109,2716,1272,1444,0.468,0.43,2.15,3,11,0,9,0,0
+297,temple,Philadelphia Pennsylvania,1895,2022,126,3081,1962,1119,0.637,6.35,2.67,9,20,10,33,2,0
+298,tennessee-state,Nashville Tennessee,1978,2022,45,1292,547,745,0.423,-8.72,-4.79,0,2,2,2,0,0
+299,tennessee-tech,Cookeville Tennessee,1944,2022,68,1863,901,962,0.484,-6.7,-3.63,0,7,1,2,0,0
+300,tennessee,Knoxville Tennessee,1909,2022,113,2802,1718,1082,0.614,8.72,5.34,14,13,5,24,0,0
+301,tennessee-martin,Martin Tennessee,1993,2022,30,883,330,553,0.374,-11.41,-4.2,0,1,0,0,0,0
+302,texas-am,College Station Texas,1913,2022,110,2787,1475,1312,0.529,2.58,2.62,4,12,2,14,0,0
+303,texas-am-corpus-christi,Corpus Christi Texas,2003,2022,20,617,315,302,0.511,-6.73,-5.01,0,1,2,2,0,0
+304,texas,Austin Texas,1906,2022,116,2967,1849,1118,0.623,6.56,3.81,13,25,3,36,3,0
+305,texas-southern,Houston Texas,1978,2022,45,1350,676,674,0.501,-10.27,-8.36,0,12,10,10,0,0
+306,texas-state,San Marcos Texas,1985,2022,38,1115,525,590,0.471,-7.88,-5.47,0,5,2,2,0,0
+307,texas-tech,Lubbock Texas,1926,2022,94,2547,1437,1110,0.564,4.74,2.75,8,13,5,19,1,0
+308,texas-pan-american,Edinburg Texas,1969,2022,54,1520,650,870,0.428,-8.4,-3.15,0,0,0,0,0,0
+309,citadel,Charleston South Carolina,1913,2022,110,2448,1029,1419,0.42,-12.87,-5.37,0,0,0,0,0,0
+310,toledo,Toledo Ohio,1916,2022,107,2632,1518,1114,0.577,1.02,-0.32,2,12,1,4,0,0
+311,towson,Towson Maryland,1980,2022,43,1272,544,728,0.428,-7.54,-4.18,0,5,3,2,0,0
+312,troy,Troy Alabama,1994,2022,29,869,411,458,0.473,-7.54,-4.93,0,6,2,2,0,0
+313,tulane,New Orleans Louisiana,1906,2022,112,2600,1255,1345,0.483,-0.99,1.3,1,6,0,3,0,0
+314,tulsa,Tulsa Oklahoma,1914,2022,109,2693,1493,1200,0.554,5.03,3.25,5,11,6,16,0,0
+315,alabama-birmingham,Birmingham Alabama,1980,2022,43,1384,869,515,0.628,6.46,2.41,2,7,6,16,0,0
+316,california-davis,Davis California,2008,2022,15,454,203,251,0.447,-6.02,-2.75,0,2,1,1,0,0
+317,california-irvine,Irvine California,1978,2022,45,1353,680,673,0.503,-1.24,0.17,0,7,2,2,0,0
+318,california-riverside,Riverside California,2002,2022,21,617,228,389,0.37,-7.53,-2.09,0,0,0,0,0,0
+319,california-san-diego,La Jolla California,2021,2022,2,46,20,26,0.435,-6.99,-1.4,0,0,0,0,0,0
+320,california-santa-barbara,Santa Barbara California,1964,2022,59,1675,900,775,0.537,-0.18,-0.12,0,5,4,6,0,0
+321,ucla,Los Angeles California,1920,2022,103,2844,1958,886,0.688,15.55,7,42,31,4,51,19,11
+322,north-carolina-asheville,Asheville North Carolina,1987,2022,36,1071,515,556,0.481,-9.58,-5.64,0,7,5,4,0,0
+323,north-carolina-greensboro,Greensboro North Carolina,1992,2022,31,949,462,487,0.487,-5.92,-4.12,0,7,4,4,0,0
+324,north-carolina-wilmington,Wilmington North Carolina,1977,2022,46,1363,706,657,0.518,-2.93,-2.59,0,9,6,6,0,0
+325,texas-arlington,Arlington Texas,1969,2022,54,1552,714,838,0.46,-7.9,-4.41,0,3,1,1,0,0
+326,utah-state,Logan Utah,1904,2022,117,2819,1667,1152,0.591,4.06,1,5,16,10,22,0,0
+327,utah,Salt Lake City Utah,1909,2022,114,2910,1858,1052,0.638,8.16,3.77,21,30,5,29,4,1
+328,utah-valley,Orem Utah,2010,2022,13,404,215,189,0.532,-5.4,-4.56,0,3,0,0,0,0
+329,texas-el-paso,El Paso Texas,1923,2022,94,2428,1384,1044,0.57,2.68,0.7,4,11,5,17,1,1
+330,texas-san-antonio,San Antonio Texas,1982,2022,41,1212,601,611,0.496,-5.9,-4.31,0,3,4,4,0,0
+331,valparaiso,Valparaiso Indiana,1918,2022,87,2228,1172,1056,0.526,-4.08,-1.48,0,14,10,9,0,0
+332,vanderbilt,Nashville Tennessee,1901,2022,120,2865,1645,1220,0.574,8.29,5.02,11,3,3,15,0,0
+333,vermont,Burlington Vermont,1921,2022,67,1826,988,838,0.541,-9.66,-7.12,0,13,8,8,0,0
+334,villanova,Villanova Pennsylvania,1921,2022,102,2807,1851,956,0.659,10.49,5.8,26,14,8,41,7,3
+335,virginia,Charlottesville Virginia,1906,2022,117,2891,1694,1196,0.586,6.98,5.58,15,11,3,24,3,1
+336,virginia-commonwealth,Richmond Virginia,1974,2022,49,1507,977,529,0.649,5.48,0.86,3,11,9,18,1,0
+337,virginia-military-institute,Lexington Virginia,1909,2022,114,2520,935,1585,0.371,-12.66,-4.69,1,2,3,3,0,0
+338,virginia-tech,Blacksburg Virginia,1909,2022,114,2774,1518,1256,0.547,4.08,1.65,3,2,2,13,0,0
+339,wagner,Staten Island New York,1966,2022,50,1427,699,728,0.49,-9.52,-7.45,0,4,1,1,0,0
+340,wake-forest,Winston-Salem North Carolina,1906,2022,116,2861,1581,1280,0.553,8.01,6.22,17,4,5,23,1,0
+341,washington,Seattle Washington,1896,2022,121,3073,1834,1239,0.597,7.4,6.13,8,12,3,17,1,0
+342,washington-state,Pullman Washington,1902,2022,121,3216,1645,1571,0.512,3.17,4.9,3,2,0,6,1,0
+343,weber-state,Ogden Utah,1964,2022,59,1736,1089,647,0.627,0.23,-2.67,1,22,10,16,0,0
+344,west-virginia,Morgantown West Virginia,1904,2022,113,2964,1827,1137,0.616,7.38,2.86,19,16,13,30,2,0
+345,western-carolina,Cullowhee North Carolina,1977,2022,46,1354,591,763,0.436,-8.55,-3.71,0,3,1,1,0,0
+346,western-illinois,Macomb Illinois,1982,2022,41,1170,482,688,0.412,-8.66,-3.74,0,2,1,0,0,0
+347,western-kentucky,Bowling Green Kentucky,1922,2022,101,2808,1852,956,0.66,3.36,-0.11,11,29,19,23,1,0
+348,western-michigan,Kalamazoo Michigan,1914,2022,109,2632,1360,1271,0.517,-2.94,-0.14,1,10,2,4,0,0
+349,wichita-state,Wichita Kansas,1906,2022,115,2870,1640,1230,0.571,6.14,3.37,8,12,4,16,2,0
+350,william-mary,Williamsburg Virginia,1906,2022,117,2717,1266,1451,0.466,-5.57,-2.6,0,3,0,0,0,0
+351,winthrop,Rock Hill South Carolina,1987,2022,36,1085,605,480,0.558,-7.07,-6.71,1,11,13,11,0,0
+352,wisconsin,Madison Wisconsin,1899,2022,124,2923,1678,1245,0.574,8.82,7.84,18,20,3,26,4,1
+353,wofford,Spartanburg South Carolina,1996,2022,27,828,420,408,0.507,-4.73,-2.59,1,4,5,5,0,0
+354,wright-state,Dayton Ohio,1988,2022,35,1063,595,468,0.56,-1.33,-2.44,0,4,4,4,0,0
+355,wyoming,Laramie Wyoming,1905,2022,117,2813,1585,1228,0.563,2.76,2.66,4,21,3,16,1,1
+356,xavier,Cincinnati Ohio,1920,2022,101,2626,1568,1058,0.597,5.85,3.83,12,18,9,28,0,0
+357,yale,New Haven Connecticut,1896,2022,127,3023,1522,1498,0.504,-6.33,-4.55,1,15,2,6,0,0
+358,youngstown-state,Youngstown Ohio,1948,2022,42,1226,484,742,0.395,-8.42,-3.43,0,0,0,0,0,0
+359,savannah-state,Savannah Georgia,2003,2019,17,513,189,324,0.368,-16.73,-5.37,0,2,0,0,0,0
+360,centenary-la,Shreveport Louisiana,1960,2011,52,1435,637,798,0.444,-8.73,-3.97,1,1,1,0,0,0
+361,birmingham-southern,Birmingham Alabama,2004,2006,5,105,65,40,0.619,-5.44,-8.72,0,1,0,0,0,0
+362,morris-brown,Atlanta Georgia,2002,2003,2,57,13,44,0.228,-25.81,-6.02,0,0,0,0,0,0
+363,northeastern-illinois,Chicago Illinois,1991,1998,8,216,78,138,0.361,-14.9,-6.65,0,0,0,0,0,0
+364,brooklyn,Brooklyn New York,1934,1992,25,567,233,334,0.411,-19.22,-9.63,0,0,0,0,0,0
+365,augusta-state,Augusta Georgia,1985,1991,7,197,64,133,0.325,-17.3,-7.99,0,0,0,0,0,0
+366,alliant-international,San Diego California,1982,1991,10,279,69,210,0.247,-18.06,-5.34,0,0,0,0,0,0
