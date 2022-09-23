@@ -10,7 +10,7 @@ Please see below for a description of each code file:
   
   **ncaa_scrape.rmd** - web scrape for team schedules from College Basketball Reference
   
-  **ncaa_season_stats.rmd** - web scrape to collect team performance stats (W-L, etc.)
+  **ncaa_season_stats.rmd** - web scrape to collect team performance stats (W-L, SOS, etc.)
   
   **ncaa_team_stats_scrape.rmb** - web scrape for team per game stats (points, assists, etc.)
   
