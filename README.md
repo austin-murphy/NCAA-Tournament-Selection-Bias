@@ -14,4 +14,4 @@ Please see below for a description of each code file:
   
   **ncaa_team_stats_scrape.rmb** - web scrape for team per game stats (points, assists, etc.)
   
-  **summary_stats.rmd** - calculates summary statistics for the initial data set and creates master data file used in models.rmd
+  **summary_stats.rmd** - calculates summary statistics for the initial data set and creates the master data file used in models.rmd
