@@ -1,6 +1,7 @@
 # NCAA-Tournament-Selection-Bias
 
 Please see below for a description of each code file:
+
   covers_scrape.rmd - the code to scrape betting data from covers.com
   initial_visualizations.rmd - a set of summary and descriptive visuals
   models.rmd - runs the models that were used
