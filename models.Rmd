@@ -240,7 +240,7 @@ summary(model8)
 ```
 
 ```{r}
-star <- stargazer(model1, model2, model7, model8, type = "html", column.labels = c("No Biases", "Both Biases"), dep.var.labels = "Made Tournament", covariate.labels = c("RPI Top 50 Wins", "RPI Below 200 Losses", "Win Pct", "Win Pct ATS", "Conference Win Pct", "Ranked", "RPI", "RPI Rank Difference", "Point Differential", "Strength of Schedule", "Major Conference", "Marquee"), omit.stat = c("all"), title = "Figure 1 - Logit Model Results", column.separate = c(2,2) + foo)
+star <- stargazer(model1, model2, model7, model8, type = "html", column.labels = c("No Biases", "Both Biases"), dep.var.labels = "Made Tournament", covariate.labels = c("RPI Top 50 Wins", "RPI Below 200 Losses", "Win Pct", "Win Pct ATS", "Conference Win Pct", "Ranked", "RPI", "RPI Rank Difference", "Point Differential", "Strength of Schedule", "Major Conference", "Marquee"), omit.stat = c("all"), title = "Figure 1 - Logit Model Results", column.separate = c(2,2))
 ```
 
 ```{r}
